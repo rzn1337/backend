@@ -20,6 +20,15 @@ app.get('/signup', (req, res) => {
     res.send("<h2>Sign Up</h2>")
 })
 
+data = {
+  name: 'John',
+  id: 123
+}
+
+app.get('/data', (req, res) => {
+  res.json(data)
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`);
 });
